@@ -1,0 +1,12 @@
+Hi
+
+Mi name is {{.Name}} and I'm {{.Age}} years old.
+
+{{ if ge (len .Bands) 1 }}
+    My favourites bands are:
+    {{range $index, $band := .Bands}}
+    {{increment $index}}. {{$band}}
+    {{end}}
+{{ end }}
+Regards,
+

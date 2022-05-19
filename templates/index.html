@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+</head>
+<body>
+  <h1>Hello, {{.Name}}, ID number: {{.Age}}</h1>
+  {{ if ge (len .Bands) 1 }}
+    <h2>Favorite bands:</h2>
+    <ul>
+      {{ range $index, $band := .Bands }}
+        <li>{{increment $index}} {{$band}}</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+</body>
+</html>
